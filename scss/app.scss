@@ -1,0 +1,200 @@
+@import "resources";
+
+// Basic Body Styles
+
+body,
+html {
+	margin: 0;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+body {
+	background-color: #2e3192;
+}
+img {
+	max-width: 100%;
+	margin: 0 auto;
+}
+button {
+	font-family: arponasans, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+// 1. -- Header
+header#primary-nav {
+	.inner-wrap {
+		display: flex;
+		max-width: 90vw;
+		margin: 0 auto;
+		.logo-wrap {
+			flex: 1;
+		}
+
+		.links-wrap {
+			flex: 1;
+
+			nav {
+				text-align: right;
+
+				a {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+// 2. -- Landing Page
+.page-wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-position: center;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	.inner-wrap {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		font-family: arponasans, sans-serif;
+		font-weight: 700;
+		font-style: normal;
+		.main-header {
+			display: flex;
+			justify-content: center;
+			.graphic-wrap {
+				display: flex;
+				margin-left: -50px;
+				img {
+					filter: drop-shadow(0 0 0.75rem crimson);
+					width: 650px;
+					animation: shake 2s;
+					animation-iteration-count: infinite;
+				}
+				@keyframes shake {
+					0% {
+						transform: translate(0px, 0px) rotate(0deg);
+					}
+					10% {
+						transform: translate(0px, 2px) rotate(0deg);
+					}
+					20% {
+						transform: translate(0px, 4px) rotate(0deg);
+					}
+					30% {
+						transform: translate(0px, 6px) rotate(0deg);
+					}
+					40% {
+						transform: translate(0px, 8px) rotate(0deg);
+					}
+					50% {
+						transform: translate(0px, 6px) rotate(0deg);
+					}
+					60% {
+						transform: translate(0px, 4px) rotate(0deg);
+					}
+					70% {
+						transform: translate(0px, 2px) rotate(0deg);
+					}
+					80% {
+						transform: translate(0px, 0px) rotate(0deg);
+					}
+					90% {
+						transform: translate(0px, -2px) rotate(0deg);
+					}
+					100% {
+						transform: translate(0px, 0px) rotate(0deg);
+					}
+				}
+			}
+			.links-wrap {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				.button-wrap {
+					display: flex;
+					a {
+						font-size: 24px;
+					}
+					a:focus {
+						border: none;
+					}
+				}
+
+				.button-wrap.anchor {
+					margin-left: -50px;
+				}
+				.button-wrap.spotify {
+					margin-left: 0px;
+				}
+				.button-wrap.twitter {
+					margin-left: 50px;
+				}
+				.button-wrap.facebook {
+					margin-left: 0px;
+				}
+				.button-wrap.instagram {
+					margin-left: -50px;
+				}
+				button {
+					margin: 30px 0;
+					border-radius: 50px;
+					border: none;
+					color: #e1f3f9;
+					text-align: center;
+					cursor: pointer;
+					a {
+						text-decoration: none;
+					}
+					a:visited {
+						color: #e1f3f9;
+					}
+				}
+				button:active {
+					background-color: #3e8e41;
+					box-shadow: 0 50px #666;
+				}
+				button.links {
+					outline: none;
+				}
+				.magenta {
+					button {
+						width: 250px;
+						background-color: #82154b;
+						box-shadow: 0 0 0 10px #b8256e, 0 0 0 20px #ff3399,
+							9px 10px 0 16px #888;
+					}
+					button:active {
+						background-color: #82154b;
+						box-shadow: 0 0 0 10px #b8256e, 0 0 0 20px #ff3399;
+						transform: translateX(6px) rotate(0deg) translateY(6px);
+						transition: 0.1s;
+					}
+				}
+				.teal {
+					button {
+						width: 250px;
+						background-color: #009999;
+						box-shadow: 0 0 0 10px #99cccc, 0 0 0 20px #ccffff,
+							9px 10px 0 16px #888;
+					}
+					button:active {
+						background-color: #009999;
+						box-shadow: 0 0 0 10px #99cccc, 0 0 0 20px #ccffff;
+						transform: translateX(6px) rotate(0deg) translateY(6px);
+						transition: 0.1s;
+					}
+				}
+			}
+		}
+	}
+}
+
+// 4. Footer
+footer {
+	display: none;
+}
